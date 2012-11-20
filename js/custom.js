@@ -4,7 +4,7 @@ $(document).ready(function() {
 function email(name, domain, withlink) {
     var addr = name + '@' + domain;
     if(withlink) {
-        return '<a href="mailto:' + addr + '"><img src="img/mail.png" alt="email height="32px" width="32px"></a>';
+        document.write('<a href="mailto:' + addr + '"><img src="img/mail.png" alt="email height="32px" width="32px"></a>');
     } else {
         return addr;
     }
