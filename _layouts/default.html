@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sean Kay</title>
+		<!-- Twitter Bootstrap -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css" />
+		<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		
+		<!-- Typekit -->
+		<script type="text/javascript" src="//use.typekit.net/lwi2jid.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<!-- Custom assets -->
+		<script type="text/javascript" src="/js/custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+	</head>
+	<body>
+		<header class="clearfix" id="header" role="banner">
+			<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h1 class="brand"><a href="/">Sean Kay</a></h1>
+				</div>
+			</div>
+				<div class="row">
+					<div class="span6">
+						<div id="navbar" role="navigation">
+							<ul>
+						  		<li id="home"><a href="#" onclick="loadPage('home')">home</a></li>
+						  		<li id="projects"><a href="#" onclick="loadPage('projects')">projects</a></li>
+				    		</ul>
+						</div>
+					</div>
+					<div class="span6"
+						<div id='contact'>
+							<ul class='unstyled'>
+								<li><a href='https://github.com/seankay' target='_blank'><img src='/img/octocat.png' alt='github' height='32px' width='32px'></a>
+								<li><a href='https://twitter.com/seanlikewhat' target='_blank'><img src='/img/twitter.png' alt='twitter' height='32px' width='32px'></a>
+								<li><a href='http://www.linkedin.com/in/snkay' target='_blank'><img src='/img/linkedin.png' alt='linkedin' height='32px' width='32px'></a></li>
+								<li><a href='#' ><img src='/img/rss.png' alt='rss' height='32px' width='32px'></a></li>
+								<li><script>email('f.sean.kay', 'gmail.com', true)</script></li>
+								</ul>
+						</div>
+					</div>
+				</div>
+	    	</div>
+	    </header>
+    	<div class="container">
+	    	<div id="content" role="main">
+	    		{{ content }}
+	    	</div>
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36464908-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		<!-- Google Analytics  End-->
+		</script>
+		</div>
+		<footer class="footer" role="contentinfo">
+			<div class="container">
+				<p>Powered by <a href="http://twitter.github.com/bootstrap/index.html" title="Bootstrap"><strong>Bootstrap</strong></a> and <a href="https://github.com/mojombo/jekyll"><strong>Jekyll</strong></a></p>
+			</div>
+		</footer>
+	</body>
+</html>
