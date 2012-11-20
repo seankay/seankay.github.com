@@ -3920,7 +3920,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #79A7D2;
 }
 
 .nav-stacked > li {
@@ -5844,11 +5844,11 @@ a.badge:hover {
 }
 
 .hero-unit {
-  padding: 60px;
-  margin-bottom: 30px;
+  padding: 20px;
+  margin-bottom: 10px;
   font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
+  font-weight: 150;
+  line-height: 20px;
   color: inherit;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;
