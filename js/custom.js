@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$('#home').click(function() { loadPage('home') } );
+	$('#projects').click(function() { loadPage('projects') } );
 });
 
 function email(name, domain, withlink) {
