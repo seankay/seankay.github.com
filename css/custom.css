@@ -4,15 +4,15 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-figure {
-    margin-left: 0;
-    margin-right: 0;
+body {
+	padding-top: 100px;
 }
 
 /* banner */
 header[role="banner"] {
-    padding: 20px 0;
+    padding: auto;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #fff;
 }
 header[role="banner"] .brand {
     margin: 0;
@@ -81,6 +81,7 @@ footer[role="contentinfo"] {
     margin-top: 20px;
     padding: 20px 0;
     border-top: 1px solid #f2f2f2;
+    background-color: #fff
 }
 footer[role="contentinfo"] p {
     color: #999;
