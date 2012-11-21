@@ -53,7 +53,7 @@ function initPopoverContent(id)
 {
 	switch(id) {
 		case '#nav-skype':
-			return "<div class='well'><p class='tk-p-font'>dotxep</p></div>"
+			return "<div class='text-info'><p class='tk-p-font'>Username: dotxep</p></div>"
 		default:
 			console.log("Unknown ID:" + id);
 	}
@@ -63,7 +63,8 @@ function initPopoverTitle(id)
 {
 	switch(id) {
 		case '#nav-skype':
-			return "<div><p class='tk-p-font text-info'>Skype Username:</p></div>"
+			// return "<div><p class='tk-p-font text-info'>Add me on Skype</p></div>"
+			return null;
 		default:
 			console.log("Unknown ID:" + id);
 	}
