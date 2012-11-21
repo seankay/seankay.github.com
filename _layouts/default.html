@@ -20,7 +20,7 @@
 			<div class="container">
 			<div class="row">
 				<div class="span12">
-					<h1 class="brand"><a href="/">Sean Kay</a></h1>
+					<h1 class="brand"><a href="/">Sean Kay</a><small></h1>
 				</div>
 			</div>
 				<div class="row">
@@ -36,10 +36,10 @@
 					<div class="span6"
 						<div id='contact'>
 							<ul class='unstyled'>
-								<li><a href='https://github.com/seankay' target='_blank'><img src='/img/octocat.png' alt='github' height='32px' width='32px'></a>
-								<li><a href='https://twitter.com/seanlikewhat' target='_blank'><img src='/img/twitter.png' alt='twitter' height='32px' width='32px'></a>
-								<li><a href='http://www.linkedin.com/in/snkay' target='_blank'><img src='/img/linkedin.png' alt='linkedin' height='32px' width='32px'></a></li>
-								<li><a href='#' ><img src='/img/rss.png' alt='rss' height='32px' width='32px'></a></li>
+								<li><a id="nav-github" href='https://github.com/seankay' target='_blank'><img src='/img/octocat.png' alt='github' height='32px' width='32px'></a>
+								<li><a id="nav-twitter" href='https://twitter.com/seanlikewhat' target='_blank'><img src='/img/twitter.png' alt='twitter' height='32px' width='32px'></a>
+								<li><a id="nav-linkedin" href='http://www.linkedin.com/in/snkay' target='_blank'><img src='/img/linkedin.png' alt='linkedin' height='32px' width='32px'></a></li>
+								<li><a id="nav-skype" rel="popover" class="" href='#'><img src='/img/skype.png' alt='skype' height='32px' width='32px'></a></li>
 								<li><script>email('f.sean.kay', 'gmail.com', true)</script></li>
 								</ul>
 						</div>
@@ -67,8 +67,14 @@
 		</div>
 		<footer class="footer" role="contentinfo">
 			<div class="container">
-				<p>Powered by <a href="http://twitter.github.com/bootstrap/index.html" title="Bootstrap"><strong>Bootstrap</strong></a> and <a href="https://github.com/mojombo/jekyll"><strong>Jekyll</strong></a></p>
-			</div>
+				<div class="row">
+					<div class="span6">
+						<p>Powered by <a href="http://twitter.github.com/bootstrap/index.html" title="Bootstrap"><strong>Bootstrap</strong></a> and <a href="https://github.com/mojombo/jekyll"><strong>Jekyll</strong></a></p>
+					</div>
+					<div class="span6">
+						<a id="nav-rss" href='#' ><img src='/img/rss.png' alt='rss' height='24px' width='24px'></a>
+					</div>
+				</div>
 		</footer>
 	</body>
 </html>

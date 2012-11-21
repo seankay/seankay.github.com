@@ -55,6 +55,7 @@ header[role="banner"] a:hover {
 {
 	color: #95B0D1;
 }
+
 /* contact */
 #contact {
 	margin: 0;
@@ -84,4 +85,8 @@ footer[role="contentinfo"] {
 footer[role="contentinfo"] p {
     color: #999;
     margin: 0;
+}
+
+#nav-rss {
+	float: right;
 }
