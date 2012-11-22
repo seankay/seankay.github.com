@@ -2,30 +2,72 @@
 layout: default
 title: Sean Kay
 ---
-<div id="content">
-	<h1 class="tk-header-font">Lorem Ipsum Dolor Sit Amet</h1>
-	<p class="tk-p-font">
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra magna quis sapien vulputate consequat. Phasellus facilisis purus non sem fringilla malesuada. Sed eu quam ac diam tincidunt convallis. Nulla mollis diam vitae sem tristique vitae mattis elit venenatis. Vestibulum ligula elit, vulputate at eleifend non, condimentum vel magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam vitae fringilla lectus. Sed nulla dolor, iaculis at fermentum a, imperdiet ac eros. Mauris euismod libero ut magna iaculis quis sagittis velit pulvinar. Donec congue ante eget libero porta tempor. Donec venenatis neque vel libero faucibus quis porttitor dui lacinia. Quisque odio nulla, egestas vel aliquam in, iaculis sit amet nibh. Sed fringilla nulla ut leo condimentum eget lobortis magna condimentum. Phasellus tincidunt elementum ullamcorper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin aliquet lacus ut purus feugiat eu convallis felis pretium.
-	</p>
-	<h2>Lorem Ipsum Dolor Sit Amet</h2>
-	<p class="tk-p-font">Nunc a purus velit. Nam nisi nisl, scelerisque sed elementum eu, sollicitudin fermentum sapien. Integer quis nulla in arcu rutrum laoreet. Ut orci nulla, semper vitae posuere ut, vehicula eget augue. Suspendisse vitae metus massa. In hac habitasse platea dictumst. Nunc congue nibh venenatis neque porta vulputate. Integer egestas odio sed purus venenatis placerat. Etiam consectetur vehicula purus, non dignissim est dignissim eu. Mauris ligula tortor, elementum eu malesuada sit amet, aliquam id sapien. Aliquam quis mauris ligula. Integer ultricies ultricies sem, vel pulvinar risus tincidunt quis.</p>
-	<h3>Lorem Ipsum Dolor Sit Amet</h3>
-	<p class="tk-p-font">Mauris risus orci, mattis at convallis ac, tincidunt non ante. Ut feugiat malesuada vehicula. Donec et nulla est. Donec rhoncus venenatis justo eu commodo. Curabitur accumsan bibendum mauris, sit amet venenatis metus bibendum ac. Quisque a rhoncus eros. Sed vitae tellus at magna porta tristique a ac neque. Sed adipiscing, lacus non tempus condimentum, magna odio laoreet purus, nec pulvinar justo tellus ut metus. Etiam sagittis eleifend felis at gravida. Duis cursus vehicula rutrum. Maecenas vehicula ultrices diam vitae lacinia. Proin tempus bibendum sapien, ac auctor lorem imperdiet vitae. Aenean arcu odio, molestie sit amet tempus a, tristique hendrerit lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce gravida augue nec nunc pulvinar nec varius ipsum ultrices. Mauris porttitor massa dolor.</p>
-	<hr>
-	<br>
-	<h1 class="tk-header-font">Lorem Ipsum Dolor Sit Amet</h1>
-	<p class="tk-p-font">Etiam vel enim eget massa porta tempor quis id orci. Aenean tellus diam, aliquet non vestibulum sit amet, pretium ut massa. Quisque ac turpis ante. Nulla placerat, nulla a varius posuere, leo odio vehicula nulla, quis consequat ante enim id lorem. Ut faucibus sollicitudin metus, eu dictum justo malesuada in. Curabitur eget massa id ipsum aliquet gravida. Nulla facilisi. Aliquam erat volutpat. Pellentesque tempor augue in sapien bibendum pretium. Mauris sed quam odio.
 
-	Aliquam erat volutpat. Aenean nec orci ut enim vehicula malesuada. Nam est urna, semper quis blandit vel, pellentesque quis enim. Curabitur ac dui elit, in vestibulum libero. Pellentesque non arcu nec mauris lacinia dapibus. Aenean dignissim interdum erat quis iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non magna id tellus hendrerit vulputate.
+<div id="home">
+		{% for post in site.posts %}
+		<!-- here add you post markup -->
+	   	<h2 class="post-header tk-header-font">
+	   		<a href="{{ post.url }}">{{ post.title }}</a>
+	   		<small>
+	    		<span class="date"> &raquo; {{ post.date | date_to_string }} </span>
+	    	</small>
+	   	</h2>
+	   	<p class="author">
+	    <h2 class="post-date tk-header-font">
+	    	
+	    </h2>
+	  	</p>
+		<div class="content">
+		    <p class="tk-p-font">{{ post.content }}</p>
+		</div>
+		<hr>
+		{% endfor %}
+</div>
+<!-- Pagination links -->
+<div id="post-pagination" class="pagination">
 
-	Suspendisse pretium blandit massa sed egestas. Aliquam et massa id lorem bibendum suscipit vel ac magna. Suspendisse sollicitudin fermentum ante et euismod. In malesuada velit eu purus rutrum eget posuere lorem mollis. Proin laoreet, eros vitae sollicitudin elementum, sem ipsum fringilla turpis, non pretium metus justo eget nisl. Nullam et ultrices felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam semper dapibus turpis, in placerat augue eleifend nec. Donec pulvinar malesuada nisi eget pulvinar. Donec urna urna, ullamcorper vitae fringilla vitae, consequat quis elit. Mauris interdum facilisis risus, eu dignissim libero elementum eu. Duis sed ipsum lectus.
+  {% if paginator.previous_page %}
+  <p class="previous">
+    {% if paginator.previous_page == 1 %}
+    <a href="/">Previous</a>
+    {% else %}
+    <a href="/page{{paginator.previous_page}}">Previous</a>
+    {% endif %}
+  </p>
+  {% else %}
+  <p class="previous disabled">
+    <span>Previous</span>
+  </p>
+  {% endif %}
 
-	Etiam id est quis nunc scelerisque ullamcorper. Suspendisse convallis tempor lacus, eget tincidunt massa vulputate a. Aenean vestibulum rhoncus nibh quis tincidunt. Maecenas tristique, ligula ac malesuada congue, sem eros vestibulum ipsum, mattis scelerisque arcu purus a elit. Fusce vel sagittis dolor. Quisque ut lorem velit, eu aliquet mauris. Praesent sed urna a odio sagittis semper. Nunc pretium laoreet orci, ac congue libero dignissim a. Sed vitae eros sit amet ipsum bibendum scelerisque. Ut varius massa a erat aliquet condimentum.
+  <ul class="pages">
+    <li class="page">
+      {% if paginator.page == 1 %}
+      <span class="current-page">1</span>
+      {% else %}
+      <a href="/">1</a>
+      {% endif %}
+    </li>
 
-	Morbi ac sapien in erat eleifend facilisis. Proin sagittis varius felis, id accumsan velit accumsan non. Fusce pulvinar, metus sit amet tincidunt rutrum, dolor mi molestie lorem, ac porttitor leo lectus non orci. Proin lacinia varius neque. Aliquam non neque ac massa placerat pellentesque nec eget sem. Quisque porta egestas purus eget placerat. Proin porta nunc ut elit lacinia eu auctor augue tempor. Donec vehicula tellus at mi consectetur bibendum.
+    {% for count in (2..paginator.total_pages) %}
+    <li class="page">
+      {% if count == paginator.page %}
+      <span class="current-page">{{count}}</span>
+      {% else %}
+      <a href="/page{{count}}">{{count}}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
 
-	Donec eget ante massa, imperdiet suscipit lectus. Vivamus id lectus lectus. Nulla rhoncus luctus mauris in egestas. Vestibulum sed libero ut ligula mattis facilisis. Cras sem lectus, imperdiet ac vestibulum eu, gravida quis magna. Ut fermentum scelerisque interdum. Integer consectetur odio non elit feugiat non facilisis lacus ornare. Proin scelerisque, urna in eleifend cursus, nisi enim volutpat ante, nec ornare purus magna in nisi. Fusce eget lacus at mauris varius consequat eget non tellus.
+  {% if paginator.next_page %}
+  <p class="next">
+    <a href="/page{{paginator.next_page}}">Next</a>
+  </p>
+  {% else %}
+  <p class="next disabled">
+    <span>Next</span>
+  </p>
+  {% endif %}
 
-	Nulla facilisi. Integer pharetra, est eu porta mollis, risus dolor interdum nunc, ut varius ipsum enim a justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper mattis lobortis. Praesent sodales odio et odio fringilla interdum. Morbi malesuada sollicitudin lorem, ac dictum massa rutrum ac. Nam ultrices blandit lobortis. Proin tempor rutrum metus sed rhoncus. Integer vel elit tellus, in tempor diam. Ut in congue arcu. Maecenas hendrerit tempor mauris, at pellentesque enim lobortis luctus. Proin sodales velit ultricies nunc tempor vitae consequat nibh sollicitudin. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-	</p>
 </div>
