@@ -1,14 +1,14 @@
 $(document).ready(function() {
-	$('#home').click(function() { loadPage('home') } );
-	$('#projects').click(function() { loadPage('projects') } );
-	$('#about').click(function() { loadPage('about') } );
+	$('#home a').attr('href', '/')
+	$('#projects a').attr('href', 'projects.html')
+	$('#about a').attr('href', 'about.html')
 	initPopover('#nav-skype');
 });
 
 function email(name, domain, withImage, msg) {
     var addr = name + '@' + domain;
     if(withImage) {
-        document.write('<a id="nav-email" href="mailto:' + addr + '"><img src="img/mail.png" alt="email height="32px" width="32px"></a>');
+        document.write('<a id="nav-email" href="mailto:' + addr + '"><img src="/img/mail.png" alt="email height="32px" width="32px"></a>');
     } else {
         document.write('<a id="nav-email" href="mailto:' + addr + '">' + msg +'</a>');
     }
@@ -17,11 +17,6 @@ function email(name, domain, withImage, msg) {
 function loadPage(page) {
 	$('#navbar > li').attr('class', '');
 	$('#navbar > li#' + page).attr('class','active');
-	if(page === 'home')
-		page = '';
-	else
-		page = page + '.html';
-	$('#content').load('/' + page + ' #content');
 }
 
 function proxyClick(id)
