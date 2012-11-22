@@ -12,8 +12,9 @@ plugins:     ./_plugins
 future:      true
 lsi:         false
 pygments:    false
-markdown:    maruku
+markdown:    rdiscount
 permalink:   date
+paginate: 5
 
 maruku:
   use_tex:    false
