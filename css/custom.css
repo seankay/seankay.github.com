@@ -24,9 +24,13 @@ header[role="banner"] a {
 }
 
 header[role="banner"] a:hover {
-	color: #95B0D1;
 	text-decoration: none;
 }
+
+.post-header a{
+	text-decoration: none;
+}
+
 /* navbar */
 #navbar {
 	margin: 0;
@@ -48,7 +52,7 @@ header[role="banner"] a:hover {
 
 #navbar ul li a:hover
 {
-	color: #95B0D1;
+	color: #005580;
 }
 
 .active
