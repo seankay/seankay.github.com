@@ -6,7 +6,6 @@ html {
 
 body {
 	height: 100%;
-	/*background-color: #f6f6f6;*/
 	background-image: url('../img/bg.png');
 }
 
@@ -14,14 +13,17 @@ body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -40px; /* Negate indent footer by its height*/
+    margin: 0 auto -30px; /* Negate indent footer by its height*/
+}
+
+.container {
+	max-width: 729px;
 }
 
 /* banner */
 header[role="banner"] {
-    padding: 30px;
+    /*padding: 30px;*/
     box-shadow: box-shadow: 0 4px 2px -2px rgba(110,110,110,0.5);
-    /*background-color: #fff;*/
 }
 header[role="banner"] .brand {
     margin: 20px;
@@ -38,7 +40,7 @@ header[role="banner"] a:hover {
 
 /* navbar */
 #navbar {
-	margin: 0;
+	margin-right: 6em;
 	padding: 0;
 	list-style-type: none;
 	text-align: center;
@@ -51,7 +53,7 @@ header[role="banner"] a:hover {
 #navbar ul li a
 {
 	text-decoration: none;
-	padding: .2em 1em;
+	padding-right: 5px;
 	color: #78AAE8;
 }
 
@@ -62,10 +64,11 @@ header[role="banner"] a:hover {
 
 /* contact */
 #social {
-	margin: 0;
-	padding: 0;
+	margin: auto;
+	padding: auto;
 	list-style-type: none;
 	text-align: center;
+	float: left;
 }
 
 #social ul li { display: inline; }
@@ -73,24 +76,18 @@ header[role="banner"] a:hover {
 #social ul li a
 {
 	text-decoration: none;
-	padding: .1em 1em;
+	padding-right: 1em;
 }
 
 .social {
-	width: 300px;
+	width: 100px;
 }
 
 /* content */
 
 #content {
-	margin-top: 20px;
-	padding: 10px 20px 0px 20px;
-	/*background-color: #fff;*/
-}
-
-.post-header a{
-	text-decoration: none;
-	color: #5477A2;
+	/*margin-top: 20px;*/
+	/*padding: 10px 20px 0px 20px;*/
 }
 
 .hero-unit {
@@ -101,7 +98,30 @@ hr{
 	width: auto;
 	height: 1px;
 	background: #5477A2;
+}
 
+/* pagination */
+.previous
+.next {
+	font-size: 10em;
+	vertical-align: middle;
+}
+
+.next {}
+.previous {}
+
+/* posts */
+.post-header a{
+	text-decoration: none;
+	color: #5477A2;
+}
+
+.attr-list li {
+	list-style: none;
+}
+
+.well {
+	background-color: rgba(220, 220, 220, 0.1);
 }
 
 /* buttons */
@@ -146,7 +166,7 @@ hr{
 }
 
 #footer {
-    padding: 10px 0;
+    padding: 10px 20px 0px 20px;
     font-size: .8em
 }
 #footer p {

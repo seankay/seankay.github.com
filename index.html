@@ -3,41 +3,29 @@ layout: default
 title: Sean Kay
 ---
 
-<div id="home">
-		{% for post in site.posts %}
-		<!-- here add you post markup -->
-	   	<h2 class="post-header tk-header-font">
-	   		<a href="{{ post.url }}">{{ post.title }}</a>
-	   		<small>
-	    		<span class="date"> &raquo; {{ post.date | date_to_string }} </span>
-	    	</small>
-	   	</h2>
-	   	<p class="author">
-	    <h2 class="post-date tk-header-font">
-	    	
-	    </h2>
-	  	</p>
-		<div class="content">
-		    <p class="tk-p-font">{{ post.content }}</p>
-		</div>
-		<hr>
-		{% endfor %}
-</div>
-<!-- Pagination links -->
-<div id="post-pagination" class="pagination">
+<div id="blog-entries">
+	{% for post in paginator.posts %}
+   	<h2 class="post-header tk-header-font">
+   		<a href="{{post.url}}">{{ post.title }}</a>
+   		<small>
+    		<span class="date"> &raquo; {{ post.date | date_to_string }} </span>
+    	</small>
+   	</h2>
+	<div class="content">
+	    <p class="tk-p-font">{{ post.content }}</p>
+	</div>
+	<hr>
+	{% endfor %}
+	<div id="post-pagination" class="pagination">
 
   {% if paginator.previous_page %}
-  <p class="previous">
     {% if paginator.previous_page == 1 %}
-    <a href="/">Previous</a>
+    <a class="previous" href="/"><</a>
     {% else %}
-    <a href="/page{{paginator.previous_page}}">Previous</a>
+    <a  class="previous"href="/page{{paginator.previous_page}}"><</a>
     {% endif %}
-  </p>
   {% else %}
-  <p class="previous disabled">
-    <span>Previous</span>
-  </p>
+  <span class="previous disabled"><</span>
   {% endif %}
 
   <ul class="pages">
@@ -61,13 +49,10 @@ title: Sean Kay
   </ul>
 
   {% if paginator.next_page %}
-  <p class="next">
-    <a href="/page{{paginator.next_page}}">Next</a>
-  </p>
+  <a class="next" href="/page{{paginator.next_page}}"><p>></p></a>
   {% else %}
-  <p class="next disabled">
-    <span>Next</span>
-  </p>
+  <span class="next disabled"><p>></p></span>
   {% endif %}
 
+</div>
 </div>

@@ -1,13 +1,16 @@
 var employment_status = "employed";
 var available = "Jan 2013";
 var social = ['twitter', 'github', 'linkedin','rss'];
+var my_addr = "sean"
+var my_domain = "snkay.com"
 
 $(document).ready(function() {
-	$('#home a').attr('href', '/');
-	$('#projects a').attr('href', 'projects.html');
+	$('#nav-home a').attr('href', '/');
+	$('#nav-projects a').attr('href', '/projects.html');
+	$('#nav-archive a').attr('href', '/archive.html');
 	initSocialBarIcons(social);
 	createEmploymentButton(employment_status);
-	$('#social-email').append(email('f.sean.kay','gmail.com',true, true));
+	$('#social-email').append(email(my_addr ,my_domain,true, true));
 });
 
 function initSocialBarIcons(social) {
@@ -32,7 +35,7 @@ function createEmploymentButton(status) {
 			break;
 		case 'unemployed':
 			btn = "<a id='employmentBtn' class='btn btn-green btn-small tk-p-font' href='mailto:"
-			 + email('f.sean.kay', 'gmail.com', false, false) + "'>Contact me!</a>"
+			 + email(my_addr, my_domain, false, false) + "'>Contact me!</a>"
 			break;
 		default: console.log("No idea what that status means. Maybe you should have some coffee ...");
 	}

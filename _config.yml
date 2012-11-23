@@ -11,10 +11,10 @@ plugins:     ./_plugins
 
 future:      true
 lsi:         false
-pygments:    false
+pygments:    true
 markdown:    rdiscount
-permalink:   date
-paginate: 5
+permalink:   /blog/:year/:month/:day/:title
+paginate: 3
 
 maruku:
   use_tex:    false
@@ -32,7 +32,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
-  
+
   coderay:
     coderay_wrap: div
     coderay_line_numbers: inline
