@@ -1,4 +1,4 @@
-var employment_status = "unemployed";
+var employment_status = "employed";
 var available = "Jan 2013";
 var social = ['twitter', 'github', 'linkedin','rss'];
 
