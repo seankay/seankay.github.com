@@ -35,7 +35,7 @@ header[role="banner"] a {
 
 header[role="banner"] a:hover {
 	text-decoration: none;
-	color: #5477A2;
+	color: #78AAE8;
 }
 
 /* navbar */
@@ -54,12 +54,12 @@ header[role="banner"] a:hover {
 {
 	text-decoration: none;
 	padding-right: 5px;
-	color: #78AAE8;
+	color: #5477A2;
 }
 
 #navbar ul li a:hover
 {
-	color: #5477A2;
+	color: #78AAE8;
 }
 
 /* contact */
