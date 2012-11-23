@@ -1,4 +1,5 @@
-var employment_status = "employed";
+var employment_status = "unemployed";
+var available = "Jan 2013";
 var social = ['twitter', 'github', 'linkedin','rss'];
 
 $(document).ready(function() {
@@ -27,7 +28,7 @@ function createEmploymentButton(status) {
 	var btn = "";
 	switch(status) {
 		case 'employed':
-			btn = "<a id='employmentBtn' class='btn btn-red btn-small tk-p-font'>Currently Employed!</a>"
+			btn = "<a id='employmentBtn' class='btn btn-red btn-small tk-p-font'> Available "+ available +"</a>"
 			break;
 		case 'unemployed':
 			btn = "<a id='employmentBtn' class='btn btn-green btn-small tk-p-font' href='mailto:"
@@ -47,7 +48,7 @@ function evaluateEmploymentStatus(status) {
 	var popupColor = "";
 	switch(status) {
 		case('employed'):
-			msg = "<h4>Sorry!</h4><p class='tk-p-font'>I'm currently not taking on any more projects. Feel free to leave me an email!</p>";
+			msg = "<h4>Sorry!</h4><p class='tk-p-font'>I'm currently not taking on any more projects. <i>Feel free to leave me an email!</i></p>";
 			popupColor = "red";
 			break;
 		case('unemployed'):
