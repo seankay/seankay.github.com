@@ -17,42 +17,15 @@ title: Sean Kay
 	<hr>
 	{% endfor %}
 	<div id="post-pagination" class="pagination">
-
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-    <a class="previous" href="/"><</a>
-    {% else %}
-    <a  class="previous"href="/page{{paginator.previous_page}}"><</a>
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a class="previous" href="/">&laquo; Previous</a>
+      {% else %}
+        <a  class="previous"href="/page{{paginator.previous_page}}">&laquo; Previous</a>
+      {% endif %}
     {% endif %}
-  {% else %}
-  <span class="previous disabled"><</span>
-  {% endif %}
-
-  <ul class="pages">
-    <li class="page">
-      {% if paginator.page == 1 %}
-      <span class="current-page">1</span>
-      {% else %}
-      <a href="/">1</a>
-      {% endif %}
-    </li>
-
-    {% for count in (2..paginator.total_pages) %}
-    <li class="page">
-      {% if count == paginator.page %}
-      <span class="current-page">{{count}}</span>
-      {% else %}
-      <a href="/page{{count}}">{{count}}</a>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-
-  {% if paginator.next_page %}
-  <a class="next" href="/page{{paginator.next_page}}"><p>></p></a>
-  {% else %}
-  <span class="next disabled"><p>></p></span>
-  {% endif %}
-
-</div>
+    {% if paginator.next_page %}
+      <a class="next" href="/page{{paginator.next_page}}"><p>Next &raquo;</p></a>
+    {% endif %}
+  </div>
 </div>
