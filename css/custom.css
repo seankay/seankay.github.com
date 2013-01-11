@@ -6,12 +6,24 @@ html {
 
 body {
 	height: 100%;
+	background-color: #9CCAE2;
+}
+
+#brand {
+	text-align: center;
+	font-family: 'Lobster Two', cursive;
+}
+
+#brand small {
+	font-size: .4em;
 }
 
 #wrap {
+	background-color:#fff;
     min-height: 100%;
+    width: 1000px;
     height: auto !important;
-    height: 100%;
+    min-height:1024px;
     margin: 0 auto -30px; /* Negate indent footer by its height*/
 }
 
@@ -67,7 +79,6 @@ header[role="banner"] a:hover {
 	padding: auto;
 	list-style-type: none;
 	text-align: center;
-	float: left;
 }
 
 #social ul li { display: inline; }
@@ -84,6 +95,15 @@ header[role="banner"] a:hover {
 
 /* content */
 
+#about  img: {
+		width: 100px;
+		height: 100px;
+}
+
+#about h1 {
+	text-align: center;
+}
+
 #content {
 	/*margin-top: 20px;*/
 	/*padding: 10px 20px 0px 20px;*/
@@ -95,10 +115,19 @@ header[role="banner"] a:hover {
 
 hr{
 	width: auto;
-	height: 1px;
-	background: #5477A2;
+	height: 2px;
+	background: #78AAE8;
 }
 
+.shadow {
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
 /* pagination */
 .previous
 .next {
@@ -165,8 +194,9 @@ hr{
 }
 
 #footer {
+	text-align: center;
     padding: 10px 20px 0px 20px;
-    font-size: .8em
+    font-size: .9em
 }
 #footer p {
     color: #999;

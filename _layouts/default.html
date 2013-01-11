@@ -2,90 +2,48 @@
 <html lang="en">
 	<head>
 		<title>Sean Kay</title>
-		<!-- Bugherd -->
-		<script type='text/javascript'>
-			(function (d, t) {
-			  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-			  bh.type = 'text/javascript';
-			  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=me9oxeiw9urxy6m7xm2xwa';
-			  s.parentNode.insertBefore(bh, s);
-			  })(document, 'script');
-		</script>
-		<!-- Bootstrap -->
 		<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
-		<!-- Custom assets -->
 		<link rel="stylesheet" type="text/css" href="/css/custom.css"/>
-		<!-- Bootstrap responsive css -->
+		<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css" />
 	</head>
 	<body>
-	    <!-- main container -->
 	    <div id="wrap">
 	    	<div class="container" >
-			    <!-- banner + navbar -->
 				<header id="header" class="header" role="banner">
 					<div class="container">
-						<!-- <div class="row"> -->
-							<!-- <div class="span12"> -->
-								<h1 class="tk-header-font brand"><a href="/">Sean Kay</a></h1>
-							<!-- </div> -->
-						<!-- </div> -->
-						<div class="row">
-							<div class="span12">
-								<!-- <div id="navbar" role="navigation">
-									<ul>
-						    		</ul>
-								</div> -->
-							<!-- </div> -->
-							<!-- <div class="span6"> -->
-								<div id='social'>
-									<ul class='unstyled'>
-										<li id="social-email"></li>
-										<li id="social-github"><a href='https://github.com/seankay' target='_blank'></a></li>
-										<li id="social-twitter"><a href='https://twitter.com/seanlikewhat' target='_blank'></a></li>
-										<li id="social-linkedin"><a href='http://www.linkedin.com/in/snkay' target='_blank'></a></li>
-										<li id="social-rss"><a href='#' ></a></li>
-										</ul>
-								</div>
-							</div>
+						<h1 id="brand"><a href="/">Sean Kay</a><small>'s humble abode</small></h1>
+						<div id='social'>
+							<ul class='unstyled'>
+								<li id="social-email"></li>
+								<li id="social-github"><a href='https://github.com/seankay' target='_blank'></a></li>
+								<li id="social-twitter"><a href='https://twitter.com/seanlikewhat' target='_blank'></a></li>
+								<li id="social-linkedin"><a href='http://www.linkedin.com/in/snkay' target='_blank'></a></li>
+								<li id="social-rss"><a href='#' ></a></li>
+							</ul>
 						</div>
 					</div>
 			    </header>
-			    <!-- banner + navbar end -->
-			    <!-- main content -->
-		    	<div id="content" class="well">
+			    <hr>
+		    	<div id="content">
 
 		    		{{ content }}
 		    	
 		    	</div>
-				<!-- Google Analytics -->
-				<script type="text/javascript">
-				  var _gaq = _gaq || [];
-				  _gaq.push(['_setAccount', 'UA-36464908-1']);
-				  _gaq.push(['_trackPageview']);
-
-				  (function() {
-				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-				  })();
-				<!-- Google Analytics  End-->
-				</script>
-			</div> <!-- content container end -->
+			</div>
 			<div id="push"></div>
-		</div> <!-- wrap end -->
+		</div>
 		<div class="container">
 			<div id="footer">
 				<div class="container">
-					<p>&copy Sean Kay <script>document.write(new Date().getFullYear())</script> | Powered by <a href="http://twitter.github.com/bootstrap/index.html" title="Bootstrap"><strong>Bootstrap</strong></a> and <a href="https://github.com/mojombo/jekyll"><strong>Jekyll</strong></a></p>
+					<p>&copy Sean Kay <script>document.write(new Date().getFullYear())</script> | Powered by <a href="http://twitter.github.com/bootstrap/index.html" title="Bootstrap" target="_blank"><strong>Bootstrap</strong></a> and <a href="https://github.com/mojombo/jekyll" target="_blank"><strong>Jekyll</strong></a></p>
 				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="/js/jquery.min.js"></script>
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/js/custom.js"></script>
-		<!-- Typekit -->
-		<script type="text/javascript" src="//use.typekit.net/lwi2jid.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		{% include google_analytics.html %}
+		{% include bugherd.html %}
 	</body>
 </html>
