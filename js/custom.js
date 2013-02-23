@@ -11,6 +11,7 @@ $(document).ready(function() {
 	initSocialBarIcons(social);
 	createEmploymentButton(employment_status);
 	$('#social-email').append(email(my_addr ,my_domain,true, true));
+	$('#footer div ul li').first().append(email(my_addr ,my_domain,false, true));
 });
 
 function initSocialBarIcons(social) {
@@ -94,9 +95,9 @@ function email(name, domain, withImage, withLink) {
 
     if(withLink)
     	if(withImage) {
-    		return ('<a href="mailto:' + addr + '">'+ getImage('email') + '</a>');	
+    		return ('<a href="mailto:' + addr + ' rel="tooltip">'+ getImage('email') + '</a>');	
     	} else {
-        	return ('<a href="mailto:' + addr + '">' + addr + '</a>');
+        	return ('<a href="mailto:' + addr + '">' + "Email" + '</a>');
     }
     else
     	return addr;

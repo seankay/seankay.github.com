@@ -1,12 +1,44 @@
 /* root */
+
+* {
+	margin: 0;
+}
 html {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
 
+ul {
+	list-style: none;
+}
+ul li {
+	text-decoration: none;
+}
+
+p {
+	font-family: 'Raleway', sans-sefif;
+}
+
+h1 {
+	font-family: 'Raleway', sans-sefif;
+	color: #21506E;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
 body {
 	height: 100%;
-	background-color: #9CCAE2;
+}
+
+.project_info {
+	border-left:2px solid #999;
+	padding-left:5px;
+}
+
+.divider {
+	border-bottom: 2px solid #999;
 }
 
 #brand {
@@ -21,9 +53,8 @@ body {
 #wrap {
 	background-color:#fff;
     min-height: 100%;
-    width: 1000px;
+    width: 100%;
     height: auto !important;
-    min-height:1024px;
     margin: 0 auto -30px; /* Negate indent footer by its height*/
 }
 
@@ -33,20 +64,18 @@ body {
 
 /* banner */
 header[role="banner"] {
-    /*padding: 30px;*/
     box-shadow: box-shadow: 0 4px 2px -2px rgba(110,110,110,0.5);
 }
 header[role="banner"] .brand {
-    margin: 20px;
 }
 
 header[role="banner"] a {
-	color: #808080;
+	font-size: 1.5em;
+	color: #235A76;
 }
 
 header[role="banner"] a:hover {
-	text-decoration: none;
-	color: #78AAE8;
+	color: #3587B1;
 }
 
 /* navbar */
@@ -63,7 +92,6 @@ header[role="banner"] a:hover {
 
 #navbar ul li a
 {
-	text-decoration: none;
 	padding-right: 5px;
 	color: #5477A2;
 }
@@ -85,7 +113,6 @@ header[role="banner"] a:hover {
 
 #social ul li a
 {
-	text-decoration: none;
 	padding-right: 1em;
 }
 
@@ -105,8 +132,16 @@ header[role="banner"] a:hover {
 }
 
 #content {
-	/*margin-top: 20px;*/
-	/*padding: 10px 20px 0px 20px;*/
+	margin: 15px;
+}
+
+
+#content p {
+	font-size: 20px;
+}
+
+.inner-content {
+	padding-left: 30px;
 }
 
 .hero-unit {
@@ -131,7 +166,7 @@ hr{
 /* pagination */
 .previous
 .next {
-	font-size: 10em;
+	font-size: 1.5em;
 	vertical-align: middle;
 }
 
@@ -140,7 +175,6 @@ hr{
 
 /* posts */
 .post-header a{
-	text-decoration: none;
 	color: #5477A2;
 }
 
@@ -194,11 +228,35 @@ hr{
 }
 
 #footer {
+	position: relative;
+	bottom: 0px;
+	border-top: 3px solid #78AAE8;
+	width: 100%;
 	text-align: center;
-    padding: 10px 20px 0px 20px;
-    font-size: .9em
+    padding: 30px 30px 50px 20px;
+    font-size: 1em
 }
 #footer p {
-    color: #999;
+    color: #666;
     margin: 0;
+}
+
+#footer ul {
+	margin: auto;
+	padding: auto;
+	list-style-type: none;
+	text-align: center;
+}
+
+#footer ul li { display: inline; }
+
+#footer ul li a
+{
+	color: #0088cc;
+	padding-right: 1em;
+}
+
+#footer a:hover
+{
+	color: #C8E0EF;
 }

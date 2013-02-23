@@ -5,42 +5,56 @@
 		<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="/css/custom.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css" />
 	</head>
 	<body>
 	    <div id="wrap">
+    		<header id="header" class="header" role="banner">
+    			<div class="container">
+    				<h1 id="brand"><a href="/">Sean Kay</a><small>'s humble abode</small></h1>
+    				<div id='social'>
+    					<ul class='unstyled'>
+    						<li id="social-email"></li>
+    						<li id="social-github">
+    							<a rel="tooltip" href='https://github.com/seankay' target='_blank'></a>
+    						</li>
+    						<li id="social-twitter">
+    							<a rel="tooltip" href='https://twitter.com/seanlikewhat' target='_blank'></a>
+    						</li>
+    						<li id="social-linkedin">
+    							<a rel="tooltip" href='http://www.linkedin.com/in/snkay' target='_blank'></a>
+    						</li>
+    					</ul>
+    				</div>
+    			</div>
+    	    </header>
 	    	<div class="container" >
-				<header id="header" class="header" role="banner">
-					<div class="container">
-						<h1 id="brand"><a href="/">Sean Kay</a><small>'s humble abode</small></h1>
-						<div id='social'>
-							<ul class='unstyled'>
-								<li id="social-email"></li>
-								<li id="social-github"><a href='https://github.com/seankay' target='_blank'></a></li>
-								<li id="social-twitter"><a href='https://twitter.com/seanlikewhat' target='_blank'></a></li>
-								<li id="social-linkedin"><a href='http://www.linkedin.com/in/snkay' target='_blank'></a></li>
-								<li id="social-rss"><a href='#' ></a></li>
-							</ul>
-						</div>
-					</div>
-			    </header>
-			    <hr>
 		    	<div id="content">
 
 		    		{{ content }}
 		    	
 		    	</div>
+		    	<div id="footer">
+		    		<div class="container">
+		    			<p>
+		    				<ul>
+		    					<li></li>
+		    					<li><a href='https://github.com/seankay' target='_blank'>Github</a></li>
+		    					<li><a href='https://twitter.com/seanlikewhat' target='_blank'>Twitter</a></li>
+		    					<li><a href='http://www.linkedin.com/in/snkay' target='_blank'>LinkedIn</a></li>
+		    				</ul>
+		    			</p>
+              <p>&copy Sean Kay <script>document.write(new Date().getFullYear())</script> 
+              | Powered by 
+              <a href="http://twitter.github.com/bootstrap/index.html" title="Bootstrap" target="_blank"><strong>Bootstrap</strong></a>, 
+              <a href="https://github.com/mojombo/jekyll" target="_blank"><strong>Jekyll</strong></a>, and 
+              <a href="http://en.wikipedia.org/wiki/Heart_(symbol)" target="_blank"><strong><3</strong></a></p>
+		    		</div>
+		    	</div>
 			</div>
-			<div id="push"></div>
 		</div>
-		<div class="container">
-			<div id="footer">
-				<div class="container">
-					<p>&copy Sean Kay <script>document.write(new Date().getFullYear())</script> | Powered by <a href="http://twitter.github.com/bootstrap/index.html" title="Bootstrap" target="_blank"><strong>Bootstrap</strong></a> and <a href="https://github.com/mojombo/jekyll" target="_blank"><strong>Jekyll</strong></a></p>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/js/custom.js"></script>
 		{% include google_analytics.html %}
