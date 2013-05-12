@@ -1,8 +1,8 @@
 var employment_status = "employed";
 var available = "Jan 2013";
 var social = ['twitter', 'github', 'linkedin','rss'];
-var my_addr = "sean"
-var my_domain = "snkay.com"
+var my_addr = "f.sean.kay"
+var my_domain = "gmail.com"
 
 $(document).ready(function() {
 	$('#nav-home a').attr('href', '/');
